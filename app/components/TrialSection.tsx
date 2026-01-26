@@ -129,9 +129,7 @@ export default function TrialSection() {
           <div className="flex gap-4">
              {/* Google Play */}
              <button className="btn h-16 bg-neutral hover:bg-neutral/90 border-2 border-neutral text-white rounded-2xl px-6 flex items-center gap-3 shadow-[4px_4px_0px_0px_#FFBD30] hover:shadow-[2px_2px_0px_0px_#FFBD30] hover:translate-x-[1px] hover:translate-y-[1px] transition-all">
-                <svg viewBox="0 0 512 512" width="28" className="fill-current text-white">
-                  <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/>
-                </svg>
+                <svg role="img" viewBox="0 0 24 24" width="28" className="fill-current text-white" xmlns="http://www.w3.org/2000/svg"><title>Google Play</title><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>
                 <div className="text-left">
                   <div className="text-[10px] uppercase font-bold leading-none text-gray-300 mb-1">GET IT ON</div>
                   <div className="text-lg font-bold leading-none">Google Play</div>
@@ -140,9 +138,7 @@ export default function TrialSection() {
 
              {/* App Store */}
              <button className="btn h-16 bg-neutral hover:bg-neutral/90 border-2 border-neutral text-white rounded-2xl px-6 flex items-center gap-3 shadow-[4px_4px_0px_0px_#FFBD30] hover:shadow-[2px_2px_0px_0px_#FFBD30] hover:translate-x-[1px] hover:translate-y-[1px] transition-all">
-                <svg viewBox="0 0 384 512" width="28" className="fill-current text-white">
-                  <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 46.9 126.7 89.8 126.7 30.8 0 38.5-19.8 86.1-19.8 30.9 0 38.2 19.8 85.5 19.8 49.4 0 79.7-81.2 89.8-126.7-55.7-17.7-90.8-59.6-90.8-106zM224 50.8c22.5-27.2 41.6-67 37.6-106.3-33 2.7-72.3 20.9-95.6 48.6-21.6 25.8-38.6 63.8-37.5 102.3 36.6 2.3 75.1-19 95.5-44.6z"/>
-                </svg>
+                <svg role="img" viewBox="0 0 24 24" width="28" className="fill-current text-white" xmlns="http://www.w3.org/2000/svg"><title>Apple</title><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
                 <div className="text-left">
                   <div className="text-[10px] uppercase font-bold leading-none text-gray-300 mb-1">Download on the</div>
                   <div className="text-lg font-bold leading-none">App Store</div>

@@ -111,7 +111,7 @@ export default function HeroSection() {
 
         {/* 4. CTA BUTTONS */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-20">
-          <button className="btn btn-primary btn-xl h-16 rounded-2xl text-neutral font-black border-[3px] border-neutral shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all text-xl px-10 flex items-center gap-3">
+          <button className="btn btn-primary btn-xl h-16 rounded-2xl text-neutral font-black border-[3px] border-neutral hover:border-[1px] hover:border-neutral shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all text-xl px-10 flex items-center gap-3">
             Unduh Bisimo
           </button>
           
