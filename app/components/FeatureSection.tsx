@@ -96,7 +96,7 @@ export default function FeaturesSection() {
 
           {/* ================= FITUR 2 (Chat) ================= */}
           {/* Layout: Teks Kiri, Gambar Kanan (pakai md:flex-row-reverse) */}
-          <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-12 md:gap-16 max-w-6xl mx-auto">
+          <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-10 md:gap-14 max-w-6xl mx-auto">
             
             {/* BAGIAN KANAN: PHONE (Secara visual di kanan karena row-reverse) */}
             <div className="w-full md:w-1/2 flex justify-center relative px-4">

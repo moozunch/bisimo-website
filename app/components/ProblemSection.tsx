@@ -30,17 +30,19 @@ export default function ProblemSection() {
           </p>
         </div>
 
-        {/* GRID MASALAH (Sesuai Slide) */}
         <div className="grid md:grid-cols-3 gap-8">
           
           {/* Masalah 1: Minim Ruang Aman */}
           <div className="card bg-white border-2 border-neutral shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-200">
             <div className="card-body items-center text-center p-8">
-              {/* Icon Rumah (Home/Safe Space) */}
-              <div className="w-16 h-16 bg-bisimo-pink rounded-full border-2 border-neutral flex items-center justify-center mb-4 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-neutral" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                </svg>
+             <div className="w-20 h-20 rounded-full border-2 border-neutral flex items-center justify-center mb-6 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                <img
+                  src="/cimo-sedih.svg" 
+                  alt="Icon Sedih Tidak Didengar"
+                  width={100}
+                  height={100}
+                  className="object-contain"
+                />
               </div>
               
               <h3 className="card-title text-2xl font-black mb-2">Minim Ruang Aman</h3>
@@ -53,37 +55,43 @@ export default function ProblemSection() {
           {/* Masalah 2: Rasio Guru Timpang */}
           <div className="card bg-white border-2 border-neutral shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-200">
             <div className="card-body items-center text-center p-8">
-              {/* Icon User Group (Guru Kewalahan) */}
-              <div className="w-16 h-16 bg-bisimo-blue rounded-full border-2 border-neutral flex items-center justify-center mb-4 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
+              <div className="w-20 h-20 rounded-full border-2 border-neutral flex items-center justify-center mb-6 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                <img
+                  src="/cimo-jijik.svg" 
+                  alt="Icon Guru Kewalahan"
+                  width={100}
+                  height={100}
+                  className="object-contain"
+                />
               </div>
+              
 
               <h3 className="card-title text-2xl font-black mb-2">Guru Kewalahan</h3>
               <p className="text-gray-600 font-medium leading-relaxed">
-                Rasio guru dan siswa terlalu timpang. Guru <span className="bg-blue-100 px-1 font-bold">tidak punya cukup waktu</span> untuk memantau kondisi emosional setiap siswa secara personal.
+                Rasio guru dan siswa terlalu timpang. Guru <span className="bg-yellow-200 px-1 font-bold">tidak punya cukup waktu</span> untuk memantau kondisi emosional setiap siswa secara personal.
               </p>
             </div>
           </div>
 
-          {/* Masalah 3: Dampaknya (Emosi Terpendam) */}
-          <div className="card bg-neutral text-white border-2 border-white shadow-[8px_8px_0px_0px_#ffffff] hover:translate-y-1 hover:shadow-[4px_4px_0px_0px_#ffffff] transition-all duration-200">
+            {/* Masalah 3: Emosi Terpendam */}
+          <div className="card bg-white border-2 border-neutral shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-200">
             <div className="card-body items-center text-center p-8">
-              {/* Icon Alert/Brain (Dampak Psikologis) */}
-              <div className="w-16 h-16 bg-bisimo-green rounded-full border-2 border-white flex items-center justify-center mb-4 shadow-[2px_2px_0px_0px_#ffffff]">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+             <div className="w-20 h-20 rounded-full border-2 border-neutral flex items-center justify-center mb-6 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                <img
+                  src="/cimo-marah.svg" 
+                  alt="Icon Sedih Tidak Didengar"
+                  width={100}
+                  height={100}
+                  className="object-contain"
+                />
               </div>
-
-              <h3 className="card-title text-2xl font-black mb-2 text-white">Emosi Terpendam</h3>
-              <p className="text-gray-300 font-medium leading-relaxed">
+              
+              <h3 className="card-title text-2xl font-black mb-2">Emosi Terpendam</h3>
+              <p className="text-gray-600 font-medium leading-relaxed">
                 Akibatnya, regulasi emosi menjadi buruk dan secara langsung <span className="text-bisimo-green font-bold underline decoration-wavy">memengaruhi pendidikan</span> serta fokus belajar mereka.
               </p>
             </div>
           </div>
-
         </div>
 
       </div>

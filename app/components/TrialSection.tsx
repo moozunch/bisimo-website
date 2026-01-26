@@ -4,10 +4,11 @@ import { useState, useEffect } from 'react';
 import NumberTicker from './magicui/number-ticker';
 import SquiggleShape from './shapes/Squiggle'; // Pastikan diimport
 import StarShape from './shapes/Ribbon'; // Pastikan diimport
+import TriangleShape from './shapes/Triangle';
 
 export default function TrialSection() {
   
-  // LOGIKA PARALLAX (Sama seperti Hero)
+  // LOGIKA PARALLAX 
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -30,54 +31,33 @@ export default function TrialSection() {
 
   return (
     <section className="py-32 bg-white relative overflow-hidden border-t-2 border-neutral">
-      
-      {/* --- BACKGROUND DECORATION (SVG Parallax) --- */}
       <div className="absolute inset-0 pointer-events-none z-0">
-         
-         {/* Plus Sign Kuning (Statik / Spin pelan) */}
-         <div className="absolute top-20 right-20 animate-spin-slow opacity-60">
-            <svg width="50" height="50" viewBox="0 0 100 100" fill="none">
-              <rect x="35" width="30" height="100" fill="#FFBD30"/>
-              <rect y="35" width="100" height="30" fill="#FFBD30"/>
-            </svg>
-         </div>
-
-         {/* Cacing Hijau (Parallax Kiri) */}
          <div 
             className="absolute top-1/3 left-10 transition-transform duration-100 ease-out opacity-80"
             style={getParallax(4)}
          >
-            <SquiggleShape className="w-24 h-12 text-bisimo-green rotate-12" />
+            <SquiggleShape className="w-40 h-40 text-bisimo-green rotate-12" />
          </div>
-
-         {/* Bintang Pink (Parallax Kanan Bawah) */}
          <div 
             className="absolute bottom-20 right-10 transition-transform duration-100 ease-out opacity-80"
             style={getParallax(-3)}
          >
-            <StarShape className="w-16 h-16 text-bisimo-pink -rotate-12" />
+            <StarShape className="w-40 h-40 text-bisimo-blue -rotate-12" />
          </div>
-
-         {/* Cacing Biru (Parallax Kiri Bawah) */}
          <div 
-            className="absolute bottom-10 left-1/4 transition-transform duration-100 ease-out opacity-60"
+            className="absolute top-20 right-10 transition-transform duration-100 ease-out "
             style={getParallax(2)}
          >
-             <SquiggleShape className="w-20 h-10 text-secondary rotate-6" />
+             <TriangleShape className="w-40 h-40 text-bisimo-pink rotate-6" />
          </div>
 
       </div>
 
       <div className="container mx-auto px-4 text-center relative z-10">
-        
-        {/* 1. LABEL KECIL */}
         <p className="text-gray-400 font-extrabold text-sm tracking-[0.2em] uppercase mb-6">
           BERGABUNGLAH SEKARANG
         </p>
-
-        {/* 2. JUMLAH DOWNLOAD (ANIMATED TICKER) */}
         <div className="mb-10 relative inline-block">
-          {/* Hiasan Plus Kecil di pojok angka */}
           <div className="absolute -top-6 -right-8 text-primary animate-bounce">
              <svg width="40" height="40" viewBox="0 0 100 100" fill="none">
                 <rect x="40" width="20" height="100" fill="currentColor"/>
@@ -113,7 +93,7 @@ export default function TrialSection() {
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
           
           {/* TOMBOL UJI COBA (WEB) */}
-          <button className="btn btn-primary btn-xl h-16 rounded-2xl text-neutral font-black border-[3px] border-neutral shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all text-xl px-10 flex items-center gap-3">
+          <button className="btn btn-primary btn-xl h-16 rounded-2xl text-neutral font-black border-[3px] border-neutral hover:border-[2px] hover:border-neutral shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all text-xl px-10 flex items-center gap-3">
             <span>Coba Versi Web</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -147,12 +127,6 @@ export default function TrialSection() {
           </div>
 
         </div>
-
-        {/* Note Kecil */}
-        <p className="mt-16 text-xs text-gray-400 font-medium">
-          *Versi Beta saat ini tersedia untuk Android. iOS segera menyusul.
-        </p>
-
       </div>
     </section>
   );

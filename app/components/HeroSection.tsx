@@ -35,47 +35,36 @@ export default function HeroSection() {
       
       {/* --- BACKGROUND DECORATION --- */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        {/* Bintang Pink Melayang (Kanan Atas) */}
         <div 
           className="absolute top-32 right-[10%] transition-transform duration-100 ease-out"
           style={getParallax(4)} 
         >
         </div>
-
-        {/* Cacing Hijau Melayang (Kiri Bawah) */}
         <div 
           className="absolute bottom-40 left-[8%] transition-transform duration-100 ease-out"
           style={getParallax(6)}
         >
           <SquiggleShape className="w-36 h-16 text-bisimo-green -rotate-12" />
         </div>
-
-         {/* Segitiga Biru Melayang (Kanan Bawah) */}
         <div 
           className="absolute bottom-20 right-[5%] opacity-60 transition-transform duration-100 ease-out"
           style={getParallax(-5)}
         >
-           <TriangleShape className="w-24 h-24 text-secondary rotate-45" />
+           <TriangleShape className="w-40 h-60 text-secondary rotate-45" />
         </div>
       </div>
 
       {/* --- MAIN CONTENT --- */}
       <div className="container mx-auto px-4 relative z-10 text-center">
 
-
-        {/* 2. HEADLINE AREA (Cimo Kanan, Ribbon Kiri) */}
         <div className="relative inline-block">
-            
-            {/* RIBBON ORNAMEN (Posisi KIRI Headline + Parallax) */}
-            {/* Diturunkan dikit (-top-16 ke -top-10) biar gak kena nav */}
+          
             <div 
-                className="absolute -top-14 -left-16 md:-left-36 z-20 transform -rotate-12 transition-transform duration-100 ease-out"
+                className="absolute -top-14 -left-14 md:-left-36 z-20 transform -rotate-12 transition-transform duration-100 ease-out"
                 style={getParallax(3)} // Ikut gerak kursor (Parallax Factor 3)
             >
                 <RibbonShape className="w-24 h-24 md:w-36 md:h-36 text-bisimo-pink drop-shadow-md" />
             </div>
-
-            {/* CIMO MASCOT (Posisi KANAN Headline + Parallax) */}
             <div 
                 className="absolute -top-28 -right-8 md:-right-28 z-20 w-32 md:w-40 transition-transform duration-100 ease-out"
                 style={getParallax(4)} // Ikut gerak kursor (Parallax Factor 4)
@@ -111,7 +100,7 @@ export default function HeroSection() {
 
         {/* 4. CTA BUTTONS */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-20">
-          <button className="btn btn-primary btn-xl h-16 rounded-2xl text-neutral font-black border-[3px] border-neutral hover:border-[1px] hover:border-neutral shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all text-xl px-10 flex items-center gap-3">
+          <button className="btn btn-primary btn-xl h-16 rounded-2xl text-neutral font-black border-[3px] border-neutral hover:border-[2px] hover:border-neutral shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all text-xl px-10 flex items-center gap-3">
             Unduh Bisimo
           </button>
           

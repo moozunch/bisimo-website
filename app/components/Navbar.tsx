@@ -49,7 +49,7 @@ export default function Navbar() {
               key={item} 
               href={`#${item.toLowerCase().replace(' ', '-')}`} 
               // Style Hover Halus (Opacity + Underline)
-              className="font-bold text-sm uppercase tracking-wider text-neutral transition-all hover:opacity-70 hover:underline decoration-2 underline-offset-8 decoration-neutral"
+              className="font-bold text-sm uppercase tracking-wider text-neutral transition-all hover:underline decoration-wavy decoration-2 underline-offset-4 decoration-neutral transition-all"
             >
               {item}
             </Link>
@@ -58,13 +58,9 @@ export default function Navbar() {
 
         {/* 3. CTA BUTTON (Style Neo-Brutalism Hitam) */}
         <div className="flex-none">
-          <a 
-            href="#download" 
-            className="btn btn-primary rounded-2xl text-neutral font-black border-[3px] border-neutral shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all px-8 flex items-center gap-3
-            "
-          >
+          <button className="btn btn-primary rounded-2xl text-neutral font-black border-[3px] border-neutral hover:border-[2px] hover:border-neutral shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all flex items-center gap-3">
             Unduh Bisimo
-          </a>
+          </button>
         </div>
         
       </div>
