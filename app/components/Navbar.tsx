@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
   return (
@@ -7,14 +8,37 @@ export default function Navbar() {
     <div className="navbar fixed top-0 z-50 bg-primary text-neutral border-b-2 border-neutral py-3 shadow-md">
       <div className="container mx-auto px-4">
         
-        {/* 1. LOGO (Kiri) */}
+        {/* 1. LOGO + TEKS (Kiri) */}
         <div className="flex-1">
-          <Link href="/" className="group flex items-center gap-1">
-            <span className="text-3xl font-black font-nunito tracking-tighter text-neutral transition-colors duration-300">
-              Bisimo
-            </span>
-            {/* Dot Putih Statis (Pemanis) */}
-            <span className="w-3 h-3 bg-white rounded-full border border-neutral group-hover:scale-125 transition-transform"></span>
+          <Link href="/" className="group flex items-center gap-3">
+            
+            {/* --- LOGO IMAGE DENGAN FRAME NEO-BRUTALISM --- */}
+            <div 
+              className="
+                relative w-11 h-11 md:w-14 md:h-14 p-1 
+                bg-white rounded-xl                        /* Background putih & sudut tumpul */
+                border-2 border-neutral                    /* Outline hitam tebal */
+                shadow-[3px_3px_0px_0px_#00000]         /* Shadow putih keras (pop-out) */
+                transition-transform duration-300 
+                group-hover:rotate-12 group-hover:scale-110 /* Animasi saat di-hover */
+                overflow-hidden
+              "
+            >
+              <Image 
+                src="/logo.png" // Pastikan file 'logo.png' ada di folder public
+                alt="Bisimo Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
+
+            {/* LOGO TEXT */}
+            <div className="flex items-baseline gap-1">
+              <span className="text-3xl font-black font-nunito tracking-tighter text-neutral transition-colors duration-300">
+                Bisimo
+              </span>
+            </div>
+
           </Link>
         </div>
 
@@ -24,8 +48,7 @@ export default function Navbar() {
             <Link 
               key={item} 
               href={`#${item.toLowerCase().replace(' ', '-')}`} 
-              // PERUBAHAN DISINI:
-              // Hover tidak ganti warna aneh-aneh, cuma opacity turun dikit & muncul garis bawah
+              // Style Hover Halus (Opacity + Underline)
               className="font-bold text-sm uppercase tracking-wider text-neutral transition-all hover:opacity-70 hover:underline decoration-2 underline-offset-8 decoration-neutral"
             >
               {item}
@@ -33,30 +56,11 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* 3. CTA BUTTON (Hitam -> Abu Tua Gelap) */}
+        {/* 3. CTA BUTTON (Style Neo-Brutalism Hitam) */}
         <div className="flex-none">
           <a 
             href="#download" 
-            className="
-              btn btn-neutral
-              rounded-full px-8 
-              text-white font-black text-base
-              
-              /* STYLE AWAL: Border Hitam, Shadow Putih */
-              border-2 border-neutral
-              shadow-[4px_4px_0px_0px_#ffffff] 
-              
-              /* HOVER EFFECT BARU (LEBIH HALUS): */
-              /* 1. Tetap Gelap (Jadi Abu Tua #333), JANGAN Putih */
-              hover:bg-[#333333] hover:border-neutral
-              
-              /* 2. Efek Tekan: Tombol gerak ke arah bayangan */
-              hover:translate-x-[2px] hover:translate-y-[2px]
-              
-              /* 3. Bayangan mengecil (biar kerasa ditekan) */
-              hover:shadow-[2px_2px_0px_0px_#ffffff] 
-              
-              transition-all duration-200
+            className="btn btn-primary rounded-2xl text-neutral font-black border-[3px] border-neutral shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all px-8 flex items-center gap-3
             "
           >
             Unduh Bisimo

@@ -111,11 +111,11 @@ export default function HeroSection() {
 
         {/* 4. CTA BUTTONS */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-20">
-          <button className="btn btn-primary btn-lg rounded-full text-neutral font-bold border-2 border-neutral shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all text-xl px-12">
+          <button className="btn btn-primary btn-xl h-16 rounded-2xl text-neutral font-black border-[3px] border-neutral shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all text-xl px-10 flex items-center gap-3">
             Unduh Bisimo
           </button>
           
-          <button className="btn btn-outline btn-neutral btn-lg rounded-full border-2 hover:bg-neutral hover:text-white transition-all gap-2 group shadow-[4px_4px_0px_0px_rgba(0,0,0,0)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center">
+          <button className="btn btn-outline btn-neutral btn-xl h-16 rounded-2xl text-neutral font-black border-[3px] border-neutral shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all text-xl px-10 flex items-center gap-3">
             <span>Pelajari Masalahnya</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform">
               <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>

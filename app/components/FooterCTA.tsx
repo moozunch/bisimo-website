@@ -14,11 +14,11 @@ export default function Footer() {
           <div className="md:col-span-4 space-y-6">
             <Link href="/" className="inline-block group">
               <span className="text-4xl font-black tracking-tighter group-hover:text-white transition-colors">
-                Bisimo.
+                Bisimo
               </span>
             </Link>
             <p className="font-bold text-lg leading-relaxed max-w-sm">
-              Teman cerita AI yang mengerti emosi dan bahasamu. Ruang aman inklusif untuk teman Tuli dan kita semua.
+              Aplikasi Bahasa Isyarat Deteksi Emosional untuk Anak Tunarungu
             </p>
             
             {/* Social Icons (Button Bulat Neo-Brutalism) */}
