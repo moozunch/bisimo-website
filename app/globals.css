@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tambahan agar scroll halaman terasa halus */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Pastikan background mengikuti tema DaisyUI kita */
+body {
+  background-color: theme('colors.base-100');
+  color: theme('colors.neutral');
+}
