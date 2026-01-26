@@ -2,7 +2,6 @@ export default function ProblemSection() {
   return (
     <section id="masalah" className="py-24 bg-primary text-neutral overflow-hidden relative">
       
-      {/* Hiasan Background Abstrak (Opsional biar ga polos banget) */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-10">
          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
             <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">

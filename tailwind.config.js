@@ -44,7 +44,7 @@ module.exports = {
           "secondary": "#209CFF",  // Biru (Kita jadikan Secondary)
           "accent": "#FFA5CA",     // Pink (Kita jadikan Accent)
           "neutral": "#070707",    // Hitam
-          "base-100": "#FFFFFF",   // Putih
+          "base-100": "#FFFEFB",   // Putih
           "info": "#07B765",       // Hijau
           
           "--rounded-box": "1.5rem", 
