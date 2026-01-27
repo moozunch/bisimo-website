@@ -42,7 +42,7 @@ export default function TestimonialsSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black mb-4 font-nunito">
             Kata Mereka tentang <br/>
-            <span className="bg-white px-2 border-2 border-neutral shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transform rotate-1 inline-block mt-2">Bisimo</span>
+            <span className="bg-white px-2 border-2 border-neutral shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rounded-xl transform rotate-1 inline-block mt-2">Bisimo</span>
           </h2>
           <p className="text-lg font-bold opacity-80">Cerita asli dari teman-teman yang sudah mencoba versi Beta.</p>
         </div>

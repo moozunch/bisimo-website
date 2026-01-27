@@ -19,9 +19,9 @@ export default function ProblemSection() {
             Realita di Lapangan
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight font-nunito">
+          <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight ">
             Suara Hati yang <br className="hidden md:block"/>
-            <span className="bg-white px-2 border-2 border-neutral shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 inline-block">Sering Terabaikan.</span>
+            <span className="bg-white px-2 border-2 border-neutral rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 inline-block">Sering Terabaikan.</span>
           </h2>
           
           <p className="text-lg font-bold max-w-2xl mx-auto opacity-80">

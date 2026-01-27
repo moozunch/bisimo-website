@@ -81,8 +81,8 @@ export default function HeroSection() {
               Mendengar yang <span className="text-primary underline decoration-wavy decoration-4 underline-offset-4">Tak Terucap.</span> <br />
               Memahami yang 
               <span className="relative inline-block mx-2">
-                  <span className="absolute inset-0 bg-secondary transform -rotate-2 border-2 border-neutral shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -z-10 rounded-sm"></span>
-                  <span className="relative z-10 px-3 text-white">Tak Terdengar.</span>
+                  <span className="absolute inset-0 bg-secondary transform -rotate-2 border-2 border-neutral shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -z-10 rounded-xl"></span>
+                  <span className="relative z-10 px-3 text-white ">Tak Terdengar.</span>
               </span>
             </h1>
         </div>
@@ -90,7 +90,7 @@ export default function HeroSection() {
         {/* 3. SUBTEXT */}
         <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed font-medium mt-4">
           Ruang aman untuk memahami dan mengekspresikan emosi, menjembatani komunikasi bagi 
-          <span className="font-bold text-white bg-bisimo-green px-2 py-1 border-2 border-neutral rounded shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 inline-block mx-1">
+          <span className="font-bold text-white bg-bisimo-green px-2 py-1 border-2 border-neutral rounded-xl shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 inline-block mx-1">
             teman Tuli
           </span> 
           dan kita semua.
