@@ -10,14 +10,12 @@ module.exports = {
       fontFamily: {
         nunito: ['var(--font-nunito)'], 
       },
-      // WARNA CUSTOM (Biar bisa dipanggil spesifik misal: text-bisimo-green)
       colors: {
         'bisimo-blue': '#209CFF',
         'bisimo-pink': '#FFA5CA',
         'bisimo-green': '#07B765',
         'bisimo-purple': '#4507b7',
       },
-      // ANIMASI HARUS DI DALAM EXTEND
       animation: {
         'float': 'float 6s ease-in-out infinite',
         'float-delayed': 'float 6s ease-in-out 3s infinite',
@@ -40,12 +38,12 @@ module.exports = {
     themes: [
       {
         bisimoTheme: {
-          "primary": "#FFBD30",    // Kuning Bisimo
-          "secondary": "#209CFF",  // Biru (Kita jadikan Secondary)
-          "accent": "#FFA5CA",     // Pink (Kita jadikan Accent)
-          "neutral": "#070707",    // Hitam
-          "base-100": "#FFFEFB",   // Putih
-          "info": "#07B765",       // Hijau
+          "primary": "#FFBD30",    
+          "secondary": "#209CFF",   
+          "accent": "#FFA5CA",      
+          "neutral": "#070707",    
+          "base-100": "#FFFEFB",   
+          "info": "#07B765",       
           
           "--rounded-box": "1.5rem", 
           "--rounded-btn": "9999px", 

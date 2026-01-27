@@ -17,7 +17,7 @@ export default function FeaturesSection() {
       
       <div className="container mx-auto px-4 relative z-10">
 
-        {/* --- PART 1: INTRO CIMO (Tetap sama) --- */}
+        {/* --- PART 1: INTRO CIMO --- */}
         <div className="text-center mb-32">
           <h2 className="text-4xl md:text-5xl font-black text-neutral mb-6 font-nunito">
             Kenalan dengan <span className="text-primary underline decoration-wavy decoration-4">Cimo.</span>
@@ -45,20 +45,15 @@ export default function FeaturesSection() {
         </div>
 
 
-        {/* --- PART 2: APP SHOWCASE (ZIG-ZAG SEIMBANG) --- */}
+        {/* --- PART 2: APP SHOWCASE --- */}
         <div className="space-y-32">
           
           {/* ================= FITUR 1 (Camera) ================= */}
           {/* Layout: Gambar Kiri, Teks Kanan */}
-          {/* Kita bungkus dalam max-w-6xl mx-auto agar baris ini terpusat */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16 max-w-6xl mx-auto">
-            
-            {/* BAGIAN KIRI: PHONE (Mengambil 50% lebar di desktop) */}
             <div className="w-full md:w-1/2 flex justify-center relative px-4">
-                {/* Background Blob Kuning */}
                 <div className="absolute top-8 w-64 h-full bg-primary rounded-[3rem] border-2 border-neutral shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] -z-10 transform -rotate-6"></div>
-                
-                {/* CUSTOM PHONE FRAME */}
+
                 <div className="relative w-full max-w-[280px] border-8 border-neutral rounded-[2.5rem] shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] bg-neutral overflow-hidden">
                    <div className="relative w-full h-auto bg-white rounded-[2rem] overflow-hidden">
                       <Image src="/app-camera.png" alt="Fitur Deteksi Wajah" width={320} height={640} className="w-full h-auto object-cover" />
@@ -66,9 +61,8 @@ export default function FeaturesSection() {
                 </div>
             </div>
             
-            {/* BAGIAN KANAN: TEKS (Mengambil 50% lebar di desktop) */}
             <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left px-4">
-               <div className="max-w-lg"> {/* Pembungkus agar teks tidak terlalu lebar */}
+               <div className="max-w-lg"> 
                   <div className="inline-block bg-bisimo-pink text-neutral px-4 py-2 rounded-lg font-bold border-2 border-neutral shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mb-6 transform -rotate-2">
                     Computer Vision + AI
                   </div>
@@ -95,23 +89,18 @@ export default function FeaturesSection() {
 
 
           {/* ================= FITUR 2 (Chat) ================= */}
-          {/* Layout: Teks Kiri, Gambar Kanan (pakai md:flex-row-reverse) */}
           <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-10 md:gap-14 max-w-6xl mx-auto">
             
-            {/* BAGIAN KANAN: PHONE (Secara visual di kanan karena row-reverse) */}
+            {/* BAGIAN KANAN: PHONE */}
             <div className="w-full md:w-1/2 flex justify-center relative px-4">
-                {/* Background Blob Biru */}
                 <div className="absolute top-8 w-64 h-full bg-bisimo-blue rounded-[3rem] border-2 border-neutral shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] -z-10 transform rotate-6"></div>
-                
-                {/* CUSTOM PHONE FRAME */}
                 <div className="relative w-full max-w-[280px] border-8 border-neutral rounded-[2.5rem] shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] bg-neutral overflow-hidden">
                    <div className="relative w-full h-auto bg-white rounded-[2rem] overflow-hidden">
                       <Image src="/app-chat.png" alt="Fitur Chat Cimo" width={320} height={640} className="w-full h-auto object-cover" />
                    </div>
                 </div>
             </div>
-            
-            {/* BAGIAN KIRI: TEKS (Secara visual di kiri) */}
+
             <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left px-4">
                <div className="max-w-lg">
                   <div className="inline-block bg-primary text-neutral px-4 py-2 rounded-lg font-bold border-2 border-neutral shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mb-6 transform rotate-2">

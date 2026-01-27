@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-
-// Import Shapes
 import RibbonShape from './shapes/Ribbon';
 import SquiggleShape from './shapes/Squiggle';
 import TriangleShape from './shapes/Triangle';
@@ -61,13 +59,13 @@ export default function HeroSection() {
           
             <div 
                 className="absolute -top-14 -left-14 md:-left-36 z-20 transform -rotate-12 transition-transform duration-100 ease-out"
-                style={getParallax(3)} // Ikut gerak kursor (Parallax Factor 3)
+                style={getParallax(3)} 
             >
                 <RibbonShape className="w-24 h-24 md:w-36 md:h-36 text-bisimo-pink drop-shadow-md" />
             </div>
             <div 
                 className="absolute -top-28 -right-8 md:-right-28 z-20 w-32 md:w-40 transition-transform duration-100 ease-out"
-                style={getParallax(4)} // Ikut gerak kursor (Parallax Factor 4)
+                style={getParallax(4)} 
             >
                 <Image 
                     src="/cimo-mascot.svg" 

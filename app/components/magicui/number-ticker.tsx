@@ -49,7 +49,6 @@ export default function NumberTicker({
   return (
     <span
       className={cn(
-        // REVISI DI SINI: Hapus 'text-black dark:text-white'
         "inline-block tabular-nums tracking-wider",
         className
       )}

@@ -102,11 +102,11 @@ export default function Footer() {
       </div>
 
       {/* BAGIAN BAWAH: COPYRIGHT */}
-      <div className="border-t-2 border-neutral bg-neutral text-white py-6">
+      <div className="border-t-2 border-neutral bg-primary text-neutral py-6">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-bold tracking-wide">
           <p>&copy; 2026 Bisimo App. Hak Cipta Dilindungi.</p>
           <p className="flex items-center gap-2">
-            Dibuat dengan <span className="text-primary text-lg">♥</span> oleh Tim Clear For All
+             oleh Tim Clear For All
           </p>
         </div>
       </div>

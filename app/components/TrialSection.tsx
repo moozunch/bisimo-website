@@ -2,13 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import NumberTicker from './magicui/number-ticker';
-import SquiggleShape from './shapes/Squiggle'; // Pastikan diimport
-import StarShape from './shapes/Ribbon'; // Pastikan diimport
+import SquiggleShape from './shapes/Squiggle'; 
 import TriangleShape from './shapes/Triangle';
+import RibbonShape from './shapes/Ribbon';
 
 export default function TrialSection() {
-  
-  // LOGIKA PARALLAX 
+
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -42,7 +41,7 @@ export default function TrialSection() {
             className="absolute bottom-20 right-10 transition-transform duration-100 ease-out opacity-80"
             style={getParallax(-3)}
          >
-            <StarShape className="w-40 h-40 text-bisimo-blue -rotate-12" />
+            <RibbonShape className="w-40 h-40 text-bisimo-blue -rotate-12" />
          </div>
          <div 
             className="absolute top-20 right-10 transition-transform duration-100 ease-out "
@@ -102,10 +101,10 @@ export default function TrialSection() {
             </svg>
           </button>
 
-          {/* DIVIDER TEKS */}
+
           <span className="text-gray-400 font-bold text-sm tracking-wider">ATAU UNDUH DI</span>
 
-          {/* APP STORE & PLAY STORE BUTTONS (Black Badge) */}
+          {/* APP STORE & PLAY STORE BUTTONS */}
           <div className="flex gap-4">
              {/* Google Play */}
              <button className="btn h-16 bg-neutral hover:bg-neutral/90 border-2 border-neutral text-white rounded-2xl px-6 flex items-center gap-3 shadow-[4px_4px_0px_0px_#FFBD30] hover:shadow-[2px_2px_0px_0px_#FFBD30] hover:translate-x-[1px] hover:translate-y-[1px] transition-all">

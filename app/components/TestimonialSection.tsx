@@ -26,7 +26,7 @@ export default function TestimonialsSection() {
   return (
     <section id="testimoni" className="py-24 bg-primary text-neutral relative overflow-hidden">
       
-      {/* Background Pattern (Titik-titik halus) */}
+      {/* Background Pattern */}
       <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
             <pattern id="dots-testi" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">

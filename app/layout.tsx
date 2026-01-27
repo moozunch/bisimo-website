@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Nunito, Lexend, Baloo_2 } from "next/font/google"; 
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const nunito = Nunito({
   subsets: ["latin"],
+  variable: "--font-nunito",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const lexend = Lexend({
   subsets: ["latin"],
+  variable: "--font-lexend",
+  display: "swap",
+});
+
+const baloo = Baloo_2({
+  subsets: ["latin"],
+  variable: "--font-baloo",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,9 +31,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    // 'scroll-smooth' agar saat klik menu navigasi, scroll-nya halus
+    <html lang="id" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        // Masukkan variable font ke sini.
+        // 'font-sans' akan otomatis menggunakan Lexend karena kita sudah setting di tailwind.config.ts
+        className={`${lexend.variable} ${nunito.variable} ${baloo.variable} font-sans antialiased bg-base-100 text-neutral`}
       >
         {children}
       </body>
