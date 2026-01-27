@@ -57,14 +57,14 @@ export default function HeroSection() {
 
         <div className="relative inline-block">
             <div 
-                className="absolute -top-12 -left-3 md:-top-14 md:-left-36 z-0 md:z-20 transform -rotate-12 transition-transform duration-100 ease-out"
+                className="absolute -top-12 -left-3 md:-top-14 md:-left-20 z-0 md:z-20 transform -rotate-12 transition-transform duration-100 ease-out"
                 style={getParallax(3)} 
             >
                 <RibbonShape className="w-24 h-24 md:w-36 md:h-36 text-bisimo-pink drop-shadow-md opacity-80 md:opacity-100" />
             </div>
 
             <div 
-                className="absolute hidden md:block -top-5 -right-8 w-24 md:-top-28 md:-right-28 md:z-20 md:w-40 transition-transform duration-100 ease-out"
+                className="absolute hidden md:block -top-5 -right-8 w-24 md:-top-28 md:-right-40 md:z-20 md:w-40 transition-transform duration-100 ease-out"
                 style={getParallax(4)} 
             >
                 <Image 
