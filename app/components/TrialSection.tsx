@@ -41,7 +41,7 @@ export default function TrialSection() {
             className="absolute top-40 -left-12 md:top-1/3 md:left-10 transition-transform duration-100 ease-out opacity-80"
             style={getParallax(4)}
          >
-            <SquiggleShape className="w-24 h-24 md:w-40 md:h-40 text-bisimo-green rotate-12" />
+            <SquiggleShape className="hidden md:block w-24 h-24 md:w-40 md:h-40 text-bisimo-green rotate-12" />
          </div>
 
                   <div 
@@ -62,7 +62,7 @@ export default function TrialSection() {
             className="absolute -top-1 -right-1 md:top-20 md:right-10 transition-transform duration-100 ease-out "
             style={getParallax(2)}
          >
-             <TriangleShape className="w-24 h-24 md:w-40 md:h-40 text-bisimo-pink rotate-6" />
+             <TriangleShape className="hidden md:block w-24 h-24 md:w-40 md:h-40 text-bisimo-pink rotate-6" />
          </div>
 
       </div>

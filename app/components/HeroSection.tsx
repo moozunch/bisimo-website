@@ -64,7 +64,7 @@ export default function HeroSection() {
             </div>
 
             <div 
-                className="absolute -top-5 -right-8 w-24 md:-top-28 md:-right-28 md:z-20 md:w-40 transition-transform duration-100 ease-out"
+                className="absolute hidden md:block -top-5 -right-8 w-24 md:-top-28 md:-right-28 md:z-20 md:w-40 transition-transform duration-100 ease-out"
                 style={getParallax(4)} 
             >
                 <Image 
