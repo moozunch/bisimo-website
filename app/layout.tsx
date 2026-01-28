@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Nunito, Lexend, Baloo_2 } from "next/font/google"; 
 import "./globals.css";
+import SmoothScroll from "./components/SmoothScrolls";
+
+
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -31,14 +34,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // 'scroll-smooth' agar saat klik menu navigasi, scroll-nya halus
     <html lang="id" className="scroll-smooth">
       <body
-        // Masukkan variable font ke sini.
-        // 'font-sans' akan otomatis menggunakan Lexend karena kita sudah setting di tailwind.config.ts
         className={`${lexend.variable} ${nunito.variable} ${baloo.variable} font-sans antialiased bg-base-100 text-neutral`}
       >
-        {children}
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );
