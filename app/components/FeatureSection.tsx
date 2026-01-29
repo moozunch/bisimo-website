@@ -14,6 +14,15 @@ export default function FeaturesSection() {
 
   return (
     <section id="fitur" className="py-24 bg-white relative overflow-hidden">
+
+      <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none z-0">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <pattern id="dots-hero" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+               <circle cx="2" cy="2" r="2" fill="#000000"/>
+            </pattern>
+            <rect width="100%" height="100%" fill="url(#dots-hero)" />
+         </svg>
+      </div>
       
       <div className="container mx-auto px-4 relative z-10">
 

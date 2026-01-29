@@ -11,7 +11,6 @@ export default function HeroSection() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    // Parallax hanya aktif di layar lebar (Desktop) untuk performa & UX
     const handleMouseMove = (e: MouseEvent) => {
       if (window.innerWidth >= 768) { 
         setMousePos({
@@ -34,6 +33,15 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-20 overflow-hidden bg-white">
       
+      <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none z-0">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <pattern id="dots-hero" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+               <circle cx="2" cy="2" r="2" fill="#000000"/>
+            </pattern>
+            <rect width="100%" height="100%" fill="url(#dots-hero)" />
+         </svg>
+      </div>
+
       {/* --- BACKGROUND DECORATION --- */}
       <div className="absolute inset-0 pointer-events-none z-0">
 
