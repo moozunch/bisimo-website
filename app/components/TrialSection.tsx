@@ -222,9 +222,9 @@ export default function TrialSection() {
                   className="w-full h-full object-cover transform scale-x-[-1]" // Mirror effect
                 />
 
-                {/* UI Overlay Ala-ala Scanning */}
+                {/* UI Overlay*/}
                 <div className="absolute inset-0 pointer-events-none z-10 border-[20px] border-transparent">
-                   {/* Pojokan Scanner */}
+                   {/*Scanner */}
                    <div className="absolute top-4 left-4 w-16 h-16 border-l-4 border-t-4 border-primary rounded-tl-xl opacity-80"></div>
                    <div className="absolute top-4 right-4 w-16 h-16 border-r-4 border-t-4 border-primary rounded-tr-xl opacity-80"></div>
                    <div className="absolute bottom-4 left-4 w-16 h-16 border-l-4 border-b-4 border-primary rounded-bl-xl opacity-80"></div>
