@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -97,16 +98,33 @@ export default function Footer() {
               </div>
             </div>
           </div>
-
         </div>
+
+        <div className="flex justify-start pt-14">
+            <div 
+              className="
+                relative h-14 md:h-18
+                w-[300px] md:w-[600px] 
+              "
+            >
+              <Image 
+                src="/sponsor.png"
+                alt="Sponsor Logo"
+                fill
+                className="object-contain object-right" 
+              />
+            </div>
+        </div>
+
       </div>
+      
 
       {/* BAGIAN BAWAH: COPYRIGHT */}
       <div className="border-t-2 border-neutral bg-primary text-neutral py-6">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-bold tracking-wide">
           <p>&copy; 2026 Bisimo App. Hak Cipta Dilindungi.</p>
           <p className="flex items-center gap-2">
-             oleh Tim Clear For All
+              oleh Tim Clear For All
           </p>
         </div>
       </div>
