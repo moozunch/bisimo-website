@@ -36,6 +36,13 @@ yarn-error.log*
 # vercel
 .vercel
 
+# Ignore large model files
+chatbot-service/model/
+chatbot-service/chatbot-service/Model_Emosi_IndoBERT/ 
+/
+*.safetensors
+*.bin
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

@@ -1,0 +1,11 @@
+# env files (can opt-in for committing if needed)
+.env*
+
+# Ignore large model files
+chatbot-service/*.pth
+chatbot-service/*.bin
+chatbot-service/*.onnx
+chatbot-service/Model_Emosi_IndoBERT/ 
+chatbot-service/model
+__pycache__/
+venv/

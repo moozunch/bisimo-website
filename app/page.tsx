@@ -5,6 +5,7 @@ import FeaturesSection from './components/FeatureSection';
 import TestimonialsSection from './components/TestimonialSection';
 import TrialSection from './components/TrialSection';
 import FooterCTA from './components/FooterCTA';
+import ChatWidget from './components/ChatWidget';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <TestimonialsSection />
       <TrialSection />
       <FooterCTA />
+      <ChatWidget />
     </main>
   );
 }
