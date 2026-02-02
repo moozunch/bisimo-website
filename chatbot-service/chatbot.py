@@ -29,7 +29,7 @@ try:
     from transformers import AutoTokenizer, AutoModelForSequenceClassification, AutoConfig
     import torch.nn.functional as F
     
-    MODEL_PATH = "./Model_Emosi_IndoBERT"
+    MODEL_PATH = "./model"
     
     if os.path.exists(MODEL_PATH):
         print("🔄 Loading IndoBERT model...")
