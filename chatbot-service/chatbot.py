@@ -4,8 +4,12 @@ import torch
 import random
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from dotenv import load_dotenv
 
-os.environ["MISTRAL_API_KEY"] = "Fyycu3ZXDtePSs8FarNurTX6X6bZrb5p"
+load_dotenv()
+
+if not os.environ.get("MISTRAL_API_KEY"):
+    print("ERROR: MISTRAL_API_KEY belum diset di .env atau Secrets!")
 
 app = Flask(__name__)
 CORS(app)
@@ -1048,7 +1052,7 @@ if __name__ == '__main__':
     print("   • Better name detection")
     print("   • Empathetic responses for emotions")
     print("   • Bestie-like conversation style")
-    print("\n📍 Open: http://localhost:5000")
+    print("\n📍 Open: http://localhost:7860")
     print("="*60 + "\n")
     
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    app.run(host='0.0.0.0', port=7860, debug=False)
