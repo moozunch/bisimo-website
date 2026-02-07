@@ -3,6 +3,24 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+// Icon Panah Sederhana
+const ArrowIcon = () => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    width="16" 
+    height="16" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="3" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+  >
+    <path d="M5 12h14" />
+    <path d="m12 5 7 7-7 7" />
+  </svg>
+);
+
 export default function Footer() {
   return (
     <footer className="bg-primary text-neutral border-t-2 border-neutral font-nunito">
@@ -22,7 +40,7 @@ export default function Footer() {
               Aplikasi Bahasa Isyarat Deteksi Emosional untuk Anak Tunarungu.
             </p>
             
-            {/* Social Icons (Instagram & Email) */}
+            {/* Social Icons */}
             <div className="flex gap-4 pt-2">
               {[
                 { 
@@ -60,9 +78,14 @@ export default function Footer() {
                 <li key={item}>
                   <Link 
                     href={`#${item.toLowerCase()}`} 
-                    className="hover:underline decoration-wavy decoration-2 underline-offset-4 decoration-neutral transition-all"
+                    className="group relative flex items-center transition-all duration-300 hover:text-neutral/70"
                   >
-                    {item}
+                    <span className="absolute left-0 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-neutral">
+                        <ArrowIcon />
+                    </span>
+                    <span className="transform group-hover:translate-x-6 transition-transform duration-300">
+                      {item}
+                    </span>
                   </Link>
                 </li>
               ))}
@@ -73,9 +96,23 @@ export default function Footer() {
           <div className="md:col-span-2">
             <h4 className="font-black text-xl mb-6 uppercase tracking-wider">Legal</h4>
             <ul className="space-y-4 font-bold">
-              <li><Link href="#" className="hover:underline decoration-wavy decoration-2 underline-offset-4 decoration-neutral transition-all">Privasi</Link></li>
-              <li><Link href="#" className="hover:underline decoration-wavy decoration-2 underline-offset-4 decoration-neutral transition-all">Syarat & Ketentuan</Link></li>
-              <li><Link href="#" className="hover:underline decoration-wavy decoration-2 underline-offset-4 decoration-neutral transition-all">Panduan Komunitas</Link></li>
+              {['Privasi', 'Syarat & Ketentuan', 'Panduan Komunitas'].map((item) => (
+                <li key={item}>
+                  <Link 
+                    href="#" 
+                    className="group relative flex items-center transition-all duration-300 hover:text-neutral/70"
+                  >
+                    {/* Panah (Absolute) */}
+                    <span className="absolute left-0 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-neutral">
+                        <ArrowIcon />
+                    </span>
+                    {/* Teks */}
+                    <span className="transform group-hover:translate-x-6 transition-transform duration-300">
+                      {item}
+                    </span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -100,7 +137,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex justify-start pt-14">
+        {/* Sponsor Images */}
+        <div className="flex justify-center pt-14">
             <div 
               className="
                 relative h-14 md:h-18
@@ -111,7 +149,7 @@ export default function Footer() {
                 src="/sponsor.png"
                 alt="Sponsor Logo"
                 fill
-                className="object-contain object-right" 
+                className="object-contain object-center" 
               />
             </div>
         </div>

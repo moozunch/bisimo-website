@@ -17,36 +17,22 @@ type Message = {
 
 // --- 1. MAPPING GAMBAR ---
 const EmotionImages: Record<string, string> = {
-  happiness: '/cimo-senang.svg',
-  joy: '/cimo-senang.svg',
-  love: '/cimo-senang.svg',
-  sadness: '/cimo-sedih.svg',
-  sad: '/cimo-sedih.svg',
-  anger: '/cimo-marah.svg',
-  angry: '/cimo-marah.svg',
-  fear: '/cimo-takut.svg',
-  anxiety: '/cimo-takut.svg',
-  disgust: '/cimo-jijik.svg',
-  surprise: '/cimo-kaget.svg',
-  neutral: '/cimo-mascot.svg', 
-  default: '/cimo-mascot.svg'
+  happiness: '/cimo-senang.svg', joy: '/cimo-senang.svg', love: '/cimo-senang.svg',
+  sadness: '/cimo-sedih.svg', sad: '/cimo-sedih.svg',
+  anger: '/cimo-marah.svg', angry: '/cimo-marah.svg',
+  fear: '/cimo-takut.svg', anxiety: '/cimo-takut.svg',
+  disgust: '/cimo-jijik.svg', surprise: '/cimo-kaget.svg',
+  neutral: '/cimo-mascot.svg', default: '/cimo-mascot.svg'
 };
 
 // --- 2. MAPPING TEKS INDONESIA ---
 const EmotionLabels: Record<string, string> = {
-  happiness: 'Senang',
-  joy: 'Senang',
-  love: 'Berbunga-bunga',
-  sadness: 'Sedih',
-  sad: 'Sedih',
-  anger: 'Marah',
-  angry: 'Marah',
-  fear: 'Takut',
-  anxiety: 'Cemas',
-  disgust: 'Jijik',
-  surprise: 'Terkejut',
-  neutral: 'Netral',
-  default: 'Netral'
+  happiness: 'Senang', joy: 'Senang', love: 'Berbunga-bunga',
+  sadness: 'Sedih', sad: 'Sedih',
+  anger: 'Marah', angry: 'Marah',
+  fear: 'Takut', anxiety: 'Cemas',
+  disgust: 'Jijik', surprise: 'Terkejut',
+  neutral: 'Netral', default: 'Netral'
 };
 
 // --- ICONS (SVG) ---
@@ -59,7 +45,7 @@ const Icons = {
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'bot', content: 'Halo! Aku Cimo. Ada yang ingin kamu ceritakan atau tanyakan tentang emosi?', emotion: 'happiness' }
+    { role: 'bot', content: 'Halo! Aku Cimo. Apa yang sedang kamu rasakan sekarang?', emotion: 'happiness' }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -81,6 +67,13 @@ export default function ChatWidget() {
     setSessionId('sess_' + Math.random().toString(36).substr(2, 9));
   }, []);
 
+  // --- EVENT LISTENER UNTUK TOMBOL HERO ---
+  useEffect(() => {
+    const handleOpenChat = () => setIsOpen(true);
+    window.addEventListener('open-chat', handleOpenChat);
+    return () => window.removeEventListener('open-chat', handleOpenChat);
+  }, []);
+
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTo({
@@ -99,7 +92,6 @@ export default function ChatWidget() {
     setIsLoading(true);
 
     try {
-      // UPDATE: Fetch ke URL Hugging Face
       const res = await fetch(`${API_URL}/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -132,7 +124,6 @@ export default function ChatWidget() {
   const handleReset = async () => {
     setMessages([{ role: 'bot', content: 'Obrolan di-reset. Mau cerita apa lagi? 😊', emotion: 'happiness' }]);
     try {
-        // UPDATE: Fetch ke URL Hugging Face
         await fetch(`${API_URL}/reset`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -155,7 +146,6 @@ export default function ChatWidget() {
             {/* --- HEADER --- */}
             <div className="bg-[#FFBD30] px-4 py-3 border-b-[3px] border-neutral flex justify-between items-center relative z-20 shadow-sm transition-colors duration-500">
               <div className="flex items-center gap-3">
-                
                 {/* DYNAMIC AVATAR */}
                 <div className="w-12 h-12 bg-white rounded-full border-2 border-neutral overflow-hidden relative shadow-sm">
                    <AnimatePresence mode='wait'>
@@ -176,7 +166,6 @@ export default function ChatWidget() {
                      </motion.div>
                    </AnimatePresence>
                 </div>
-
                 <div>
                     <h3 className="font-black text-neutral text-lg leading-none">Cimo</h3>
                     <div className="flex items-center gap-1.5 mt-1">
@@ -187,7 +176,6 @@ export default function ChatWidget() {
                     </div>
                 </div>
               </div>
-              
               <div className="flex gap-2">
                   <button onClick={handleReset} className="w-8 h-8 flex items-center justify-center rounded-full bg-white/50 border-2 border-transparent hover:border-neutral hover:bg-white transition-all text-neutral" title="Reset Chat">
                     <Icons.Reset />
@@ -234,21 +222,37 @@ export default function ChatWidget() {
               </div>
             </div>
 
-            {/* --- QUICK CHIPS --- */}
+            {/* --- QUICK CHIPS (VISIBLE SCROLLBAR) --- */}
             <div className="px-4 py-2 bg-white border-t-2 border-neutral/10">
-                <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide no-scrollbar touch-pan-x">
+                <div className="
+                    flex gap-2 w-full overflow-x-auto pb-2 touch-pan-x
+                    /* SCROLLBAR VISIBLE STYLING */
+                    [&::-webkit-scrollbar]:h-2
+                    [&::-webkit-scrollbar-track]:bg-gray-100
+                    [&::-webkit-scrollbar-thumb]:bg-gray-400
+                    [&::-webkit-scrollbar-thumb]:rounded-full
+                    [&::-webkit-scrollbar-thumb]:hover:bg-gray-500
+                ">
                     {[
-                        { icon: '😢', text: 'Lagi sedih' },
-                        { icon: '😤', text: 'Lagi kesel' },
-                        { icon: '😊', text: 'Seneng banget' },
-                        { icon: '💪', text: 'Minta tips' }
+                        { label: 'Senang', icon: '😊', text: 'Aku lagi senang banget hari ini!' },
+                        { label: 'Sedih', icon: '😢', text: 'Aku merasa sedih...' },
+                        { label: 'Marah', icon: '😡', text: 'Aku lagi marah banget.' },
+                        { label: 'Takut', icon: '😱', text: 'Aku merasa takut.' },
+                        { label: 'Jijik', icon: '🤢', text: 'Aku sedang merasa jijik' },
+                        { label: 'Terkejut', icon: '😲', text: 'Aku kaget banget barusan!' },
                     ].map((chip, i) => (
                         <button 
                             key={i}
+                            type="button" // PENTING: Mencegah submit form
                             onClick={() => handleSend(chip.text)}
-                            className="btn btn-xs h-8 bg-white border-2 border-neutral text-neutral hover:bg-[#FFBD30] rounded-full flex-shrink-0 font-bold px-4 transition-colors whitespace-nowrap"
+                            className="
+                                flex-shrink-0 
+                                btn btn-xs h-8 bg-white border-2 border-neutral text-neutral 
+                                hover:bg-[#FFBD30] rounded-full font-bold px-4 
+                                transition-colors whitespace-nowrap cursor-pointer
+                            "
                         >
-                            <span className="mr-1">{chip.icon}</span> {chip.text}
+                            <span className="mr-1">{chip.icon}</span> {chip.label}
                         </button>
                     ))}
                 </div>

@@ -39,24 +39,43 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* 2. MENU TENGAH (Desktop) */}
-        <div className="hidden md:flex flex-none gap-8 mr-8">
-          {['Masalah', 'Fitur', 'Tentang Kami'].map((item) => (
-            <Link 
-              key={item} 
-              href={`#${item.toLowerCase().replace(' ', '-')}`} 
-              className="font-bold text-sm uppercase tracking-wider text-neutral transition-all hover:underline decoration-wavy decoration-2 underline-offset-4 decoration-neutral transition-all"
-            >
-              {item}
-            </Link>
-          ))}
-        </div>
+       {/* 2. MENU TENGAH (Desktop) - REVISI ANTI GAGAL */}
+<div className="hidden md:flex flex-none gap-8 mr-8">
+  {['Masalah', 'Fitur', 'Tentang Kami'].map((item) => (
+    <Link 
+      key={item} 
+      href={`#${item.toLowerCase().replace(' ', '-')}`} 
+      className="
+        font-bold text-sm uppercase tracking-wider text-neutral 
+        transition-all duration-300
+        
+        /* JARAK & POSISI */
+        pb-1               /* Jarak teks ke gelombang */
+        border-b-2 border-transparent /* Border transparan biar teks gak lompat */
+        
+        /* SETTING GELOMBANG */
+        bg-bottom bg-repeat-x bg-no-repeat
+        
+        /* URL SVG (Sudah diperbaiki tanpa spasi error) */
+        hover:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2020%204%27%3E%3Cpath%20fill=%27none%27%20stroke=%27%23171717%27%20stroke-width=%271.5%27%20d=%27M0%203.5c5%200%205-3%2010-3s5%203%2010%203%205-3%2010-3%205%203%2010%203%27/%3E%3C/svg%3E')]
+        
+        /* UKURAN (Ubah 20px jadi 30px kalau mau lebih renggang lagi) */
+        bg-[length:20px_4px] 
+      "
+    >
+      {item}
+    </Link>
+  ))}
+</div>
 
         {/* 3. CTA BUTTON*/}
         <div className="flex-none">
-          <button className="btn btn-primary rounded-2xl text-neutral font-black border-[3px] border-neutral hover:border-[2px] hover:border-neutral shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all flex items-center gap-3">
+          <Link 
+            href="#download"  // <-- Ganti ini dengan ID section tujuanmu
+            className="btn btn-primary rounded-2xl text-neutral font-black border-[3px] border-neutral hover:border-[2px] hover:border-neutral shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all flex items-center gap-3"
+          >
             Unduh Bisimo
-          </button>
+          </Link>
         </div>
         
       </div>
