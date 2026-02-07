@@ -4,6 +4,8 @@ import { useState, useRef, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 
+const API_URL = "https://moozunch-bisimo-api-chatbot.hf.space";
+
 // --- TYPE DEFINITIONS ---
 type Message = {
   role: 'user' | 'bot';
@@ -30,7 +32,7 @@ const EmotionImages: Record<string, string> = {
   default: '/cimo-mascot.svg'
 };
 
-// --- 2. MAPPING TEKS INDONESIA (BARU) ---
+// --- 2. MAPPING TEKS INDONESIA ---
 const EmotionLabels: Record<string, string> = {
   happiness: 'Senang',
   joy: 'Senang',
@@ -73,8 +75,6 @@ export default function ChatWidget() {
   }, [messages]);
 
   const currentImageSrc = EmotionImages[currentEmotion] || EmotionImages['default'];
-  
-  // Ambil label bahasa Indonesia, kalau tidak ada pakai teks asli
   const currentLabelID = EmotionLabels[currentEmotion] || currentEmotion;
 
   useEffect(() => {
@@ -99,7 +99,8 @@ export default function ChatWidget() {
     setIsLoading(true);
 
     try {
-      const res = await fetch('/api/chat', {
+      // UPDATE: Fetch ke URL Hugging Face
+      const res = await fetch(`${API_URL}/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
@@ -121,6 +122,7 @@ export default function ChatWidget() {
       setIsIndobertActive(data.indobert_active);
 
     } catch (error) {
+      console.error("Chat Error:", error);
       setMessages(prev => [...prev, { role: 'bot', content: "Maaf, Cimo lagi pusing (Gagal koneksi server) 😵‍💫", emotion: 'sadness' }]);
     } finally {
       setIsLoading(false);
@@ -130,7 +132,8 @@ export default function ChatWidget() {
   const handleReset = async () => {
     setMessages([{ role: 'bot', content: 'Obrolan di-reset. Mau cerita apa lagi? 😊', emotion: 'happiness' }]);
     try {
-        await fetch('/api/reset', {
+        // UPDATE: Fetch ke URL Hugging Face
+        await fetch(`${API_URL}/reset`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ session_id: sessionId })
@@ -178,7 +181,6 @@ export default function ChatWidget() {
                     <h3 className="font-black text-neutral text-lg leading-none">Cimo</h3>
                     <div className="flex items-center gap-1.5 mt-1">
                         <span className={`w-2 h-2 rounded-full ${isIndobertActive ? 'bg-green-600 animate-pulse' : 'bg-neutral/30'}`}></span>
-                        {/* TEKS HEADER INDONESIA */}
                         <span className="text-[10px] font-bold text-neutral/70 uppercase tracking-wide">
                             {currentEmotion === 'neutral' ? 'Mendengarkan...' : `Merasa: ${currentLabelID}`}
                         </span>
