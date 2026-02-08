@@ -41,7 +41,7 @@ export default function Navbar() {
 
        {/* 2. MENU TENGAH (Desktop) - REVISI ANTI GAGAL */}
 <div className="hidden md:flex flex-none gap-8 mr-8">
-  {['Masalah', 'Fitur', 'Tentang Kami'].map((item) => (
+  {['Masalah', 'Fitur', 'Cara Kerja'].map((item) => (
     <Link 
       key={item} 
       href={`#${item.toLowerCase().replace(' ', '-')}`} 
@@ -71,7 +71,7 @@ export default function Navbar() {
         {/* 3. CTA BUTTON*/}
         <div className="flex-none">
           <Link 
-            href="#download"  // <-- Ganti ini dengan ID section tujuanmu
+            href="#download"  
             className="btn btn-primary rounded-2xl text-neutral font-black border-[3px] border-neutral hover:border-[2px] hover:border-neutral shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all flex items-center gap-3"
           >
             Unduh Bisimo

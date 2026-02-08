@@ -132,7 +132,6 @@ export default function HeroSection() {
               "
             >
               Curhat dengan Cimo
-              {/* Icon Kelinci Cimo */}
               <div className="relative w-8 h-8">
                 <Image 
                     src="/cimo-senang.svg" 
