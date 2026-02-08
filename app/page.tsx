@@ -6,6 +6,8 @@ import TestimonialsSection from './components/TestimonialSection';
 import TrialSection from './components/TrialSection';
 import FooterCTA from './components/FooterCTA';
 import ChatWidget from './components/ChatWidget';
+import HowItWorksSection from './components/HowItWorksSection';
+import FAQSection from './components/FAQSection';
 
 export default function Home() {
   return (
@@ -14,7 +16,9 @@ export default function Home() {
       <HeroSection />
       <ProblemSection />
       <FeaturesSection />
-      <TestimonialsSection />
+      <HowItWorksSection />
+      <FAQSection />
+      {/* <TestimonialsSection /> */}
       <TrialSection />
       <FooterCTA />
       <ChatWidget />
